@@ -6,18 +6,26 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "~/components/ui/chart"
+import type { Route } from "./+types/about";
 
 const chartData = [
   { skill: "Solo Projects", value: 100 },
 ]
+  
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "About Page" },
+    { name: "description", content: "Learn more about me" },
+  ];
+}
 
 export default function AboutPage() {
   return (
     <main className="container mx-auto p-4 md:p-8">
-      <h1 className="mb-6 text-3xl font-bold tracking-tight">About Page</h1>
+      <h1 className="mb-6 text-3xl font-bold tracking-tight text-white">About Page</h1>
       <div className="grid auto-rows-[192px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {/* Block 1: Our Mission */}
-        <div className="flex items-center justify-center rounded-lg border bg-card p-6 text-card-foreground shadow-sm sm:col-span-2 lg:col-span-2 lg:row-span-2">
+        <div className="flex items-center justify-center rounded-4xl border bg-card p-6 text-card-foreground shadow-sm sm:col-span-2 lg:col-span-2 lg:row-span-2">
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:text-left">
             <img
               src="/joseph.jpg"
@@ -34,7 +42,7 @@ export default function AboutPage() {
         </div>
 
         {/* Block 2: Our History */}
-        <div className="flex flex-col rounded-lg border bg-card p-6 text-card-foreground shadow-sm lg:row-span-2">
+        <div className="flex flex-col rounded-4xl border bg-card p-6 text-card-foreground shadow-sm lg:row-span-2">
           <div>
             <h2 className="text-xl font-semibold">About Me</h2>
             <ul className="mt-2 list-inside list-disc space-y-1 text-muted-foreground">
@@ -47,7 +55,7 @@ export default function AboutPage() {
         </div>
 
         {/* Block 5: What I can code with */}
-        <div className="flex items-center justify-center rounded-lg border bg-card p-6 text-card-foreground shadow-sm sm:col-span-2 lg:col-span-3">
+        <div className="flex items-center justify-center rounded-4xl border bg-card p-6 text-card-foreground shadow-sm sm:col-span-2 lg:col-span-3">
           <div className="text-center">
             <h2 className="text-xl font-semibold">What I can code with</h2>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-4xl">
