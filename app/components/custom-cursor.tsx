@@ -49,7 +49,12 @@ export function CustomCursor() {
         top: position.y,
         left: position.x,
         fontSize: "1rem", // 24px
-        color: "var(--color-foreground)",
+        color: "#9ca0b0",
+        border: "2px solid #9ca0b0",
+        borderRadius: "50%",
+        padding: "0.5rem",
+        marginTop: "-1rem", // Half of the height to center
+        marginLeft: "-1rem", // Half of the width to center
         filter: "drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))",
         pointerEvents: "none",
         zIndex: 9999,

@@ -37,7 +37,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body> 
-        <CustomCursor />
         <SidebarProvider>
           <AppSidebar />
           <div className="bg-[url('/lightwall.jpg')] dark:bg-[url('/darkwall.jpg')] top-4 right-4 left-4 bottom-4 m-2 mt-4 mb-4 w-screen rounded-4xl">
