@@ -50,11 +50,11 @@ export default function AboutPage() {
           </div>
 
           {/* Block 6: My Skills Chart */}
-          <div className="flex flex-col rounded-4xl border bg-card p-6 text-card-foreground shadow-sm">
+          <div className="flex flex-col rounded-4xl border bg-card p-12 text-card-foreground shadow-sm">
             <h2 className="text-xl font-semibold">How much i use these</h2>
             <div className="mt-4 flex-1">
               <ChartContainer config={{}} className="h-full w-full">
-                <BarChart accessibilityLayer data={chartData} layout="vertical" margin={{ left: 10 }}>
+                <BarChart accessibilityLayer data={chartData} layout="vertical" margin={{ left: 20, right: 0, top: 0, bottom: 0 }}>
                   <CartesianGrid horizontal={false} />
                   <YAxis
                     dataKey="skill"
