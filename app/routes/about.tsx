@@ -85,8 +85,9 @@ export default function AboutPage() {
   useEffect(() => {
     const motionApi = (window as Window & { Motion?: MotionApi }).Motion;
     const pageElement = pageRef.current;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    if (!motionApi || !pageElement) {
+    if (!motionApi || !pageElement || prefersReducedMotion) {
       return;
     }
 
