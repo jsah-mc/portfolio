@@ -35,7 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
-        <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/motion@10.18.0/dist/motion.js" defer></script>
       </head>
       <body>
         <SidebarProvider>
